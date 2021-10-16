@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 100px auto 0;
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+}
+
+.slider {
+  background-color: #25282a;
+  width: 80%;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.container > input {
+  display: none;
+}
+
+.slide {
+  height: inherit;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  transform: scale(1.2);
+  transition: transform ease-in-out 1s, opacity ease-in-out 1s;
+}
+
+#first:checked ~ .slider > .first,
+#second:checked ~ .slider > .second,
+#third:checked ~ .slider > .third,
+#fourth:checked ~ .slider > .fourth {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+  animation-duration: 1s;
+  animation-name: slideIn;
+}
+
+.slider__image {
+  width: 100%;
+}
+
+.slider__description {
+  width: 70%;
+  color: aliceblue;
+  font-size: 45px;
+  padding-top: 60px;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 100%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.container .pagination {
+  left: 70%;
+  top: 90%;
+  position: absolute;
+  width: 20%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  z-index: 5;
+}
+
+.pagination label {
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin: 25px 12px 0 16px;
+  position: relative;
+  background-color: rgb(19, 111, 231);
+  border-radius: 50%;
+  transition: background ease-in-out 0.5s;
+}
+
+.container label:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+.container label:active,
+#first:checked ~ .pagination label:nth-of-type(1),
+#second:checked ~ .pagination label:nth-of-type(2),
+#third:checked ~ .pagination label:nth-of-type(3),
+#fourth:checked ~ .pagination label:nth-of-type(4) {
+  background: transparent;
+  border: 3px solid rgb(19, 111, 231);
+}
