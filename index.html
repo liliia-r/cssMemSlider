@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSS Mem Slider</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <input type="radio" name="checkbox" id="first" checked />
+      <input type="radio" name="checkbox" id="second" />
+      <input type="radio" name="checkbox" id="third" />
+      <input type="radio" name="checkbox" id="fourth" />
+      <div class="pagination">
+        <label for="first"></label>
+        <label for="second"></label>
+        <label for="third"></label>
+        <label for="fourth"></label>
+      </div>
+
+      <ul class="slider">
+        <li class="slide first">
+          <img class="slider__image" src="assets/img/desktop/1.jpg" alt="" />
+          <p class="slider__description">Chuck and inventions</p>
+        </li>
+        <li class="slide second">
+          <img class="slider__image" src="assets/img/desktop/2.jpg" alt="" />
+          <p class="slider__description">Chuck and books</p>
+        </li>
+        <li class="slide third">
+          <img class="slider__image" src="assets/img/desktop/3.jpg" alt="" />
+          <p class="slider__description">Chuck and body position</p>
+        </li>
+        <li class="slide fourth">
+          <img class="slider__image" src="assets/img/desktop/4.jpg" alt="" />
+          <p class="slider__description">Chuck and fish</p>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
