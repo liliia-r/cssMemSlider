@@ -119,3 +119,32 @@ ul {
   background: transparent;
   border: 3px solid rgb(19, 111, 231);
 }
+
+@media screen and (max-width: 420px) {
+  .container {
+    width: 340px;
+    margin: 0 auto;
+  }
+
+  .slider {
+    height: 400px;
+  }
+
+  .slider__description {
+    font-size: 12px;
+  }
+
+  .container .pagination {
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pagination label {
+    height: auto;
+    width: 10px;
+    height: 10px;
+  }
+}
